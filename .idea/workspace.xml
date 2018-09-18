@@ -2,8 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4750bfc-bf55-42a7-912c-db3f34e46635" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/gossip/src/main/java/Route.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gossip/src/main/java/Bus.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/main/java/Bus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/src/test/java/BusShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/test/java/BusShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gossip/src/main/java/BusLines.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/main/java/BusLines.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gossip/src/main/java/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/main/java/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gossip/src/test/java/BusLinesShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/test/java/BusLinesShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gossip/src/test/java/CityShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/test/java/CityShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gossip/target/classes/Bus.class" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/target/classes/Bus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gossip/target/classes/BusLines.class" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/target/classes/BusLines.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gossip/target/classes/City.class" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/target/classes/City.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gossip/target/test-classes/BusLinesShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/target/test-classes/BusLinesShould.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gossip/target/test-classes/CityShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/target/test-classes/CityShould.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/gossip/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +37,8 @@
       <file leaf-file-name="CityShould.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gossip/src/test/java/CityShould.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="29" column="55" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
+            <state relative-caret-position="126">
+              <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,8 +49,8 @@
       <file leaf-file-name="City.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gossip/src/main/java/City.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="390">
+              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
               <folding>
                 <element signature="e#88#89#0" expanded="true" />
                 <element signature="e#128#129#0" expanded="true" />
@@ -58,10 +68,23 @@
       <file leaf-file-name="BusLinesShould.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gossip/src/test/java/BusLinesShould.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="224">
+              <caret line="54" column="23" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Route.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gossip/src/main/java/Route.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+              <folding>
+                <element signature="e#50#51#0" expanded="true" />
+                <element signature="e#106#107#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,7 +93,7 @@
       <file leaf-file-name="BusShould.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gossip/src/test/java/BusShould.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="300">
               <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -79,11 +102,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bus.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Bus.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gossip/src/main/java/Bus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+            <state relative-caret-position="329">
+              <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#244#245#0" expanded="true" />
@@ -97,16 +120,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BusLines.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BusLines.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gossip/src/main/java/BusLines.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
+            <state relative-caret-position="194">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#72#73#0" expanded="true" />
                 <element signature="e#92#93#0" expanded="true" />
-                <element signature="e#240#241#0" expanded="true" />
-                <element signature="e#264#265#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,12 +157,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/gossip/pom.xml" />
-        <option value="$PROJECT_DIR$/gossip/src/main/java/City.java" />
-        <option value="$PROJECT_DIR$/gossip/src/test/java/CityShould.java" />
-        <option value="$PROJECT_DIR$/gossip/src/test/java/BusLinesShould.java" />
-        <option value="$PROJECT_DIR$/gossip/src/main/java/BusLines.java" />
         <option value="$PROJECT_DIR$/gossip/src/test/java/BusShould.java" />
+        <option value="$PROJECT_DIR$/gossip/src/test/java/CityShould.java" />
+        <option value="$PROJECT_DIR$/gossip/src/main/java/City.java" />
+        <option value="$PROJECT_DIR$/gossip/src/main/java/Route.java" />
+        <option value="$PROJECT_DIR$/gossip/src/test/java/BusLinesShould.java" />
         <option value="$PROJECT_DIR$/gossip/src/main/java/Bus.java" />
+        <option value="$PROJECT_DIR$/gossip/src/main/java/BusLines.java" />
       </list>
     </option>
   </component>
@@ -199,6 +222,21 @@
               <item name="gossipBusDriver" type="462c0819:PsiDirectoryNode" />
               <item name="gossip" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gossipBusDriver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gossipBusDriver" type="462c0819:PsiDirectoryNode" />
+              <item name="gossip" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gossipBusDriver" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gossipBusDriver" type="462c0819:PsiDirectoryNode" />
+              <item name="gossip" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -246,34 +284,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BusShould">
+  <component name="RunManager" selected="JUnit.BusLinesShould.moveTheBusToNextStop">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="BusLinesShould" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BusLinesShould.moveTheBusToNextStop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gossip" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BusLinesShould" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="BusLinesShould.tellIfAllDriversDontKnowAllGossips" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gossip" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BusLinesShould" />
-      <option name="METHOD_NAME" value="tellIfAllDriversDontKnowAllGossips" />
+      <option name="METHOD_NAME" value="moveTheBusToNextStop" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -335,6 +356,23 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="CityShould.moveAllBusesToNexStop" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gossip" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CityShould" />
+      <option name="METHOD_NAME" value="moveAllBusesToNexStop" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -374,19 +412,19 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="JUnit.BusLinesShould.tellIfAllDriversDontKnowAllGossips" />
-      <item itemvalue="JUnit.BusLinesShould" />
       <item itemvalue="JUnit.BusShould.knowIfheKnowsAllGossips" />
       <item itemvalue="JUnit.BusShould.notKnoewAllGossipsIfItHasNotKnownAllBuses" />
       <item itemvalue="JUnit.BusShould" />
+      <item itemvalue="JUnit.CityShould.moveAllBusesToNexStop" />
+      <item itemvalue="JUnit.BusLinesShould.moveTheBusToNextStop" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BusLinesShould.moveTheBusToNextStop" />
+        <item itemvalue="JUnit.CityShould.moveAllBusesToNexStop" />
         <item itemvalue="JUnit.BusShould" />
         <item itemvalue="JUnit.BusShould.notKnoewAllGossipsIfItHasNotKnownAllBuses" />
         <item itemvalue="JUnit.BusShould.knowIfheKnowsAllGossips" />
-        <item itemvalue="JUnit.BusLinesShould" />
-        <item itemvalue="JUnit.BusLinesShould.tellIfAllDriversDontKnowAllGossips" />
       </list>
     </recent_temporary>
   </component>
@@ -400,29 +438,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537270318576</updated>
-      <workItem from="1537270321193" duration="4156000" />
+      <workItem from="1537270321193" duration="6771000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BusLinesShould_tellIfAllDriversKnowAllGossips - 2018.09.18 at 14h 13m 31s.xml">
-      <configuration name="BusLinesShould.tellIfAllDriversKnowAllGossips" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BusLinesShould - 2018.09.18 at 14h 18m 06s.xml">
-      <configuration name="BusLinesShould" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BusLinesShould - 2018.09.18 at 14h 18m 26s.xml">
-      <configuration name="BusLinesShould" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BusLinesShould - 2018.09.18 at 14h 22m 45s.xml">
-      <configuration name="BusLinesShould" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BusShould_knowIfheKnowsAllGossips - 2018.09.18 at 14h 27m 50s.xml">
-      <configuration name="BusShould.knowIfheKnowsAllGossips" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BusShould_knowIfheKnowsAllGossips - 2018.09.18 at 14h 29m 59s.xml">
-      <configuration name="BusShould.knowIfheKnowsAllGossips" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BusShould_notKnoewAllGossipsIfItHasNotKnownAllBuses - 2018.09.18 at 14h 33m 03s.xml">
       <configuration name="BusShould.notKnoewAllGossipsIfItHasNotKnownAllBuses" configurationId="JUnit" />
     </history-entry>
@@ -435,9 +455,27 @@
     <history-entry file="BusShould - 2018.09.18 at 14h 38m 37s.xml">
       <configuration name="BusShould" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BusShould - 2018.09.18 at 14h 41m 31s.xml">
+      <configuration name="BusShould" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CityShould_moveAllBusesToNexStop - 2018.09.18 at 14h 49m 01s.xml">
+      <configuration name="CityShould.moveAllBusesToNexStop" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CityShould_moveAllBusesToNexStop - 2018.09.18 at 14h 49m 22s.xml">
+      <configuration name="CityShould.moveAllBusesToNexStop" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CityShould_moveAllBusesToNexStop - 2018.09.18 at 18h 39m 00s.xml">
+      <configuration name="CityShould.moveAllBusesToNexStop" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BusLinesShould_moveTheBusToNextStop - 2018.09.18 at 18h 50m 07s.xml">
+      <configuration name="BusLinesShould.moveTheBusToNextStop" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BusLinesShould_moveTheBusToNextStop - 2018.09.18 at 18h 54m 18s.xml">
+      <configuration name="BusLinesShould.moveTheBusToNextStop" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4156000" />
+    <option name="totallyTimeSpent" value="6771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="797" extended-state="0" />
@@ -489,8 +527,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gossip/src/main/java/City.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="390">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
             <element signature="e#88#89#0" expanded="true" />
             <element signature="e#128#129#0" expanded="true" />
@@ -504,42 +542,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gossip/src/test/java/CityShould.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="29" column="55" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gossip/src/main/java/BusLines.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
-          <folding>
-            <element signature="e#72#73#0" expanded="true" />
-            <element signature="e#92#93#0" expanded="true" />
-            <element signature="e#240#241#0" expanded="true" />
-            <element signature="e#264#265#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gossip/src/test/java/BusLinesShould.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gossip/src/test/java/BusShould.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="300">
           <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -547,10 +552,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gossip/src/test/java/CityShould.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="35" column="11" lean-forward="true" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gossip/src/main/java/Route.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+          <folding>
+            <element signature="e#50#51#0" expanded="true" />
+            <element signature="e#106#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gossip/src/main/java/Bus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        <state relative-caret-position="329">
+          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#244#245#0" expanded="true" />
@@ -559,6 +585,28 @@
             <element signature="e#375#376#0" expanded="true" />
             <element signature="e#570#571#0" expanded="true" />
             <element signature="e#607#608#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gossip/src/test/java/BusLinesShould.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="54" column="23" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gossip/src/main/java/BusLines.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#72#73#0" expanded="true" />
+            <element signature="e#92#93#0" expanded="true" />
           </folding>
         </state>
       </provider>

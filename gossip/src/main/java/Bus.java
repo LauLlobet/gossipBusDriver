@@ -25,4 +25,24 @@ public class Bus implements Comparable<Bus> {
     public int compareTo(Bus o) {
         return this.id - o.id;
     }
+
+    public void moveTo(int stop) {
+
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Bus bus = (Bus) o;
+        return id == bus.id &&
+                busesThatCanMeet == bus.busesThatCanMeet &&
+                Objects.equals(meetBuses, bus.meetBuses);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(meetBuses, id, busesThatCanMeet);
+    }
 }

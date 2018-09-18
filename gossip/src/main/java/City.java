@@ -13,6 +13,7 @@ class City {
         stops = 1;
         while(driversStillDontKnowAllGossips() && thereAreMoreStops()){
             stops++;
+            busLines.moveBusesToNextStop();
         }
         return thereAreMoreStops() ? formatResponse(stops) : NEVER;
     }
