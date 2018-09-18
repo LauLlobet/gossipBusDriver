@@ -15,24 +15,18 @@ public class CityShould {
 
     @Test
     public void countMinutesStopsSecretsAreKnownByAll(){
-        City city = new City(busLines);
         when(busLines.doAllDriversKnowAllGossips())
                 .thenReturn(false)
                 .thenReturn(false)
                 .thenReturn(true);
 
-        String stops = city.countStopsTillSecretsAreKnownByAll();
-
-        assertThat(stops,is("3"));
+        assertThat(new City(busLines).countStopsTillSecretsAreKnownByAll(),is("3"));
     }
 
     @Test
     public void returnNeverIfLimitIsPassed() {
-        City city= new City(busLines);
         when(busLines.doAllDriversKnowAllGossips()).thenReturn(false);
 
-        String stops = city.countStopsTillSecretsAreKnownByAll();
-
-        assertThat(stops,is("never"));
+        assertThat(new City(busLines).countStopsTillSecretsAreKnownByAll(),is("never"));
     }
 }
