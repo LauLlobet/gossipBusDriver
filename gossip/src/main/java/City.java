@@ -1,21 +1,32 @@
-public class City {
+class City {
 
+    public static final String NEVER = "never";
+    public static final int STOPS_LIMIT = 480;
     private BusLines busLines;
+    private int stops;
 
-    public City(BusLines busLines) {
-
+    City(BusLines busLines) {
         this.busLines = busLines;
     }
 
-    public int countStopsTillSecretsAreKnownByAll() {
-        int stops = 1;
-        while(driversStillDontKnowAllGossips()){
+    String countStopsTillSecretsAreKnownByAll() {
+        stops = 1;
+        while(driversStillDontKnowAllGossips() && thereAreMoreStops()){
             stops++;
         }
-        return stops;
+        return thereAreMoreStops() ? formatResponse(stops) : NEVER;
     }
 
     private boolean driversStillDontKnowAllGossips() {
         return ! busLines.doAllDriversKnowAllGossips();
     }
+
+    private boolean thereAreMoreStops() {
+        return stops < STOPS_LIMIT;
+    }
+
+    private String formatResponse(int stops) {
+        return ""+stops;
+    }
+
 }

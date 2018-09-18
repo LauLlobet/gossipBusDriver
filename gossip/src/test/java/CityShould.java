@@ -21,9 +21,18 @@ public class CityShould {
                 .thenReturn(false)
                 .thenReturn(true);
 
-        int stops = city.countStopsTillSecretsAreKnownByAll();
+        String stops = city.countStopsTillSecretsAreKnownByAll();
 
-        assertThat(stops,is(3));
+        assertThat(stops,is("3"));
     }
 
+    @Test
+    public void returnNeverIfLimitIsPassed() {
+        City city= new City(busLines);
+        when(busLines.doAllDriversKnowAllGossips()).thenReturn(false);
+
+        String stops = city.countStopsTillSecretsAreKnownByAll();
+
+        assertThat(stops,is("never"));
+    }
 }

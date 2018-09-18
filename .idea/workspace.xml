@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4750bfc-bf55-42a7-912c-db3f34e46635" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_all_1_9_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gossip/gossip.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gossip/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gossip/src/main/java/BusLines.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gossip/src/main/java/City.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gossip/src/test/java/CityShould.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gossip/src/main/java/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/main/java/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gossip/src/test/java/CityShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/test/java/CityShould.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/gossip/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,8 +27,8 @@
       <file leaf-file-name="CityShould.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gossip/src/test/java/CityShould.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+            <state relative-caret-position="324">
+              <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,11 +39,17 @@
       <file leaf-file-name="City.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gossip/src/main/java/City.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+            <state relative-caret-position="345">
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
               <folding>
-                <element signature="e#371#372#0" expanded="true" />
-                <element signature="e#433#434#0" expanded="true" />
+                <element signature="e#88#89#0" expanded="true" />
+                <element signature="e#128#129#0" expanded="true" />
+                <element signature="e#488#489#0" expanded="true" />
+                <element signature="e#550#551#0" expanded="true" />
+                <element signature="e#592#593#0" expanded="true" />
+                <element signature="e#626#627#0" expanded="true" />
+                <element signature="e#674#675#0" expanded="true" />
+                <element signature="e#705#706#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,9 +109,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="797" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -196,7 +195,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.CityShould.returnNeverIfLimitIsPassed">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -207,6 +206,23 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="CityShould" />
       <option name="METHOD_NAME" value="countMinutesStopsSecretsAreKnownByAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="CityShould.returnNeverIfLimitIsPassed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gossip" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CityShould" />
+      <option name="METHOD_NAME" value="returnNeverIfLimitIsPassed" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -255,8 +271,13 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="JUnit.CityShould.countMinutesStopsSecretsAreKnownByAll" />
+      <item itemvalue="JUnit.CityShould.returnNeverIfLimitIsPassed" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CityShould.returnNeverIfLimitIsPassed" />
         <item itemvalue="JUnit.CityShould.countMinutesStopsSecretsAreKnownByAll" />
       </list>
     </recent_temporary>
@@ -271,32 +292,47 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537270318576</updated>
-      <workItem from="1537270321193" duration="1235000" />
+      <workItem from="1537270321193" duration="2033000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CityShould_countMinutesStopsSecretsAreKnownByAll - 2018.09.18 at 13h 45m 20s.xml">
-      <configuration name="CityShould.countMinutesStopsSecretsAreKnownByAll" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CityShould_countMinutesStopsSecretsAreKnownByAll - 2018.09.18 at 13h 49m 15s.xml">
-      <configuration name="CityShould.countMinutesStopsSecretsAreKnownByAll" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CityShould_countMinutesStopsSecretsAreKnownByAll - 2018.09.18 at 13h 49m 45s.xml">
-      <configuration name="CityShould.countMinutesStopsSecretsAreKnownByAll" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CityShould_countMinutesStopsSecretsAreKnownByAll - 2018.09.18 at 13h 51m 39s.xml">
       <configuration name="CityShould.countMinutesStopsSecretsAreKnownByAll" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CityShould_countMinutesStopsSecretsAreKnownByAll - 2018.09.18 at 13h 52m 00s.xml">
       <configuration name="CityShould.countMinutesStopsSecretsAreKnownByAll" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CityShould_countMinutesStopsSecretsAreKnownByAll - 2018.09.18 at 13h 52m 38s.xml">
+      <configuration name="CityShould.countMinutesStopsSecretsAreKnownByAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CityShould_countMinutesStopsSecretsAreKnownByAll - 2018.09.18 at 13h 55m 09s.xml">
+      <configuration name="CityShould.countMinutesStopsSecretsAreKnownByAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CityShould_countMinutesStopsSecretsAreKnownByAll - 2018.09.18 at 13h 56m 23s.xml">
+      <configuration name="CityShould.countMinutesStopsSecretsAreKnownByAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CityShould_returnNeverIfLimitIsPassed - 2018.09.18 at 13h 58m 28s.xml">
+      <configuration name="CityShould.returnNeverIfLimitIsPassed" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CityShould_returnNeverIfLimitIsPassed - 2018.09.18 at 13h 59m 07s.xml">
+      <configuration name="CityShould.returnNeverIfLimitIsPassed" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CityShould_returnNeverIfLimitIsPassed - 2018.09.18 at 14h 00m 43s.xml">
+      <configuration name="CityShould.returnNeverIfLimitIsPassed" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CityShould_returnNeverIfLimitIsPassed - 2018.09.18 at 14h 02m 51s.xml">
+      <configuration name="CityShould.returnNeverIfLimitIsPassed" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CityShould_returnNeverIfLimitIsPassed - 2018.09.18 at 14h 05m 04s.xml">
+      <configuration name="CityShould.returnNeverIfLimitIsPassed" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1235000" />
+    <option name="totallyTimeSpent" value="2033000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="797" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
@@ -352,8 +388,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gossip/src/test/java/CityShould.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="23" column="36" lean-forward="true" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+        <state relative-caret-position="324">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -362,11 +398,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gossip/src/main/java/City.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        <state relative-caret-position="345">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
           <folding>
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
+            <element signature="e#88#89#0" expanded="true" />
+            <element signature="e#128#129#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+            <element signature="e#705#706#0" expanded="true" />
           </folding>
         </state>
       </provider>
