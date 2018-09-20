@@ -6,6 +6,7 @@ public class Bus implements Comparable<Bus> {
     private Set<Bus> meetBuses = new TreeSet<>();
     private int id;
     private int busesThatCanMeet;
+    private int currentStop;
 
 
     public Bus(int id, int numberOfBuses) {
@@ -24,10 +25,6 @@ public class Bus implements Comparable<Bus> {
     @Override
     public int compareTo(Bus o) {
         return this.id - o.id;
-    }
-
-    public void moveTo(int stop) {
-
     }
 
     @Override

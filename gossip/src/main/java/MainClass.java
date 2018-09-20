@@ -1,25 +1,25 @@
-class City {
+class MainClass {
 
     public static final String NEVER = "never";
     public static final int STOPS_LIMIT = 480;
-    private BusLines busLines;
+    private GossipsSpreadChecker gossipsSpreadChecker;
     private int stops;
 
-    City(BusLines busLines) {
-        this.busLines = busLines;
+    MainClass(GossipsSpreadChecker gossipsSpreadChecker) {
+        this.gossipsSpreadChecker = gossipsSpreadChecker;
     }
 
     String countStopsTillSecretsAreKnownByAll() {
         stops = 1;
         while(driversStillDontKnowAllGossips() && thereAreMoreStops()){
             stops++;
-            busLines.moveBusesToNextStop();
+            gossipsSpreadChecker.moveBusesToNextStop();
         }
         return thereAreMoreStops() ? formatResponse(stops) : NEVER;
     }
 
     private boolean driversStillDontKnowAllGossips() {
-        return ! busLines.doAllDriversKnowAllGossips();
+        return ! gossipsSpreadChecker.doAllDriversKnowAllGossips();
     }
 
     private boolean thereAreMoreStops() {

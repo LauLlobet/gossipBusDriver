@@ -10,40 +10,40 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
-public class CityShould {
+public class MainClassShould {
 
     @Mock
-    BusLines busLines;
+    GossipsSpreadChecker gossipsSpreadChecker;
 
     //stubs
     @Test
     public void countMinutesStopsSecretsAreKnownByAll(){
-        when(busLines.doAllDriversKnowAllGossips())
+        when(gossipsSpreadChecker.doAllDriversKnowAllGossips())
                 .thenReturn(false)
                 .thenReturn(false)
                 .thenReturn(true);
 
-        assertThat(new City(busLines).countStopsTillSecretsAreKnownByAll(),is("3"));
+        assertThat(new MainClass(gossipsSpreadChecker).countStopsTillSecretsAreKnownByAll(),is("3"));
     }
 
     @Test
     public void returnNeverIfLimitIsPassed() {
-        when(busLines.doAllDriversKnowAllGossips()).thenReturn(false);
+        when(gossipsSpreadChecker.doAllDriversKnowAllGossips()).thenReturn(false);
 
-        assertThat(new City(busLines).countStopsTillSecretsAreKnownByAll(),is("never"));
+        assertThat(new MainClass(gossipsSpreadChecker).countStopsTillSecretsAreKnownByAll(),is("never"));
     }
 
     //mocks
     @Test
     public void moveAllBusesToNexStop(){
-        when(busLines.doAllDriversKnowAllGossips())
+        when(gossipsSpreadChecker.doAllDriversKnowAllGossips())
                 .thenReturn(false)
                 .thenReturn(false)
                 .thenReturn(true);
 
-        new City(busLines).countStopsTillSecretsAreKnownByAll();
+        new MainClass(gossipsSpreadChecker).countStopsTillSecretsAreKnownByAll();
 
-        verify(busLines,times(2)).moveBusesToNextStop();
+        verify(gossipsSpreadChecker,times(2)).moveBusesToNextStop();
 
     }
 }
