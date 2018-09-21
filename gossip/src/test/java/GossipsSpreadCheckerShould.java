@@ -9,7 +9,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
-public class GossipsFullySpreadCheckerShould {
+public class GossipsSpreadCheckerShould {
 
     @Mock
     private Bus busThatKnowsAll;
@@ -26,9 +26,9 @@ public class GossipsFullySpreadCheckerShould {
     public void tellIfAllBusesKnowAllGossips() {
         GossipsSpreadChecker gossipsSpreadChecker = new GossipsSpreadChecker();
 
-        gossipsSpreadChecker.addBus(busThatKnowsAll, null);
-        gossipsSpreadChecker.addBus(busThatKnowsAll, null);
-        gossipsSpreadChecker.addBus(busThatKnowsAll, null);
+        gossipsSpreadChecker.addBus(busThatKnowsAll);
+        gossipsSpreadChecker.addBus(busThatKnowsAll);
+        gossipsSpreadChecker.addBus(busThatKnowsAll);
 
         assertThat(gossipsSpreadChecker.doAllDriversKnowAllGossips(), is(true));
     }
@@ -37,9 +37,9 @@ public class GossipsFullySpreadCheckerShould {
     public void tellIfAllBusesDontKnowAllGossips() {
         GossipsSpreadChecker gossipsSpreadChecker = new GossipsSpreadChecker();
 
-        gossipsSpreadChecker.addBus(busThatDontKnowsAll, null);
-        gossipsSpreadChecker.addBus(busThatKnowsAll, null);
-        gossipsSpreadChecker.addBus(busThatKnowsAll, null);
+        gossipsSpreadChecker.addBus(busThatDontKnowsAll);
+        gossipsSpreadChecker.addBus(busThatKnowsAll);
+        gossipsSpreadChecker.addBus(busThatKnowsAll);
 
         assertThat(gossipsSpreadChecker.doAllDriversKnowAllGossips(), is(false));
     }

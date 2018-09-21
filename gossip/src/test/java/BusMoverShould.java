@@ -23,12 +23,11 @@ public class BusMoverShould {
         BusMover busMover = new BusMover();
 
         busMover.addBusToRoute(bus, route);
-        when(route.nextStop()).thenReturn(stop3);
-        when(route.actualStop()).thenReturn(stop2);
+        when(route.actualStop()).thenReturn(stop3).thenReturn(stop2);
 
         busMover.moveBusesToNextStop();
 
-        verify(stop3).has(bus);
-        verify(stop2).hasNot(bus);
+        verify(stop3).arrives(bus);
+        verify(stop2).leaves(bus);
     }
 }

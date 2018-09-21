@@ -10,8 +10,9 @@ public class BusMover{
     public void moveBusesToNextStop() {
         busesWithRoutes.keySet().forEach(bus->{
             RouteStopsEnumerator route = busesWithRoutes.get(bus);
-            route.actualStop().hasNot(bus);
-            route.nextStop().has(bus);
+            route.actualStop().leaves(bus);
+            route.goToNextStop();
+            route.actualStop().arrives(bus);
         });
     }
 

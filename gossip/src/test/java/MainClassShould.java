@@ -33,17 +33,4 @@ public class MainClassShould {
         assertThat(new MainClass(gossipsSpreadChecker).countStopsTillSecretsAreKnownByAll(),is("never"));
     }
 
-    //mocks
-    @Test
-    public void moveAllBusesToNexStop(){
-        when(gossipsSpreadChecker.doAllDriversKnowAllGossips())
-                .thenReturn(false)
-                .thenReturn(false)
-                .thenReturn(true);
-
-        new MainClass(gossipsSpreadChecker).countStopsTillSecretsAreKnownByAll();
-
-        verify(gossipsSpreadChecker,times(2)).moveBusesToNextStop();
-
-    }
 }

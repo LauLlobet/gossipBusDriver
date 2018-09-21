@@ -13,12 +13,18 @@ public class RouteStopsEnumeratorShould {
                 new BusStop(8),
                 new BusStop(3),
                 new BusStop(7));
-        assertThat(route.nextStop().id(),is(9));
+        route.goToNextStop();
         assertThat(route.actualStop().id(),is(9));
-        assertThat(route.nextStop().id(),is(1));
-        assertThat(route.nextStop().id(),is(2));
-        assertThat(route.nextStop().id(),is(8));
-        assertThat(route.nextStop().id(),is(3));
+        route.goToNextStop();
+        assertThat(route.actualStop().id(),is(9));
+        route.goToNextStop();
+        assertThat(route.actualStop().id(),is(1));
+        route.goToNextStop();
+        assertThat(route.actualStop().id(),is(2));
+        route.goToNextStop();
+        assertThat(route.actualStop().id(),is(8));
+        route.goToNextStop();
+        assertThat(route.actualStop().id(),is(3));
     }
 
     @Test
@@ -27,9 +33,12 @@ public class RouteStopsEnumeratorShould {
                 new BusStop(1),
                 new BusStop(2),
                 new BusStop(3));
-        assertThat(route.nextStop().id(),is(1));
-        assertThat(route.nextStop().id(),is(2));
-        assertThat(route.nextStop().id(),is(3));
-        assertThat(route.nextStop().id(),is(1));
+        assertThat(route.actualStop().id(),is(1));
+        route.goToNextStop();
+        assertThat(route.actualStop().id(),is(2));
+        route.goToNextStop();
+        assertThat(route.actualStop().id(),is(3));
+        route.goToNextStop();
+        assertThat(route.actualStop().id(),is(1));
     }
 }

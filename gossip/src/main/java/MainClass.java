@@ -3,19 +3,28 @@ class MainClass {
     public static final String NEVER = "never";
     public static final int STOPS_LIMIT = 480;
     private GossipsSpreadChecker gossipsSpreadChecker;
-    private int stops;
+    private BusMover busMover;
+    private GossipsSpreader gossipsSpreader;
+    private int ticks = 0;
 
     MainClass(GossipsSpreadChecker gossipsSpreadChecker) {
         this.gossipsSpreadChecker = gossipsSpreadChecker;
     }
 
+    public MainClass(GossipsSpreadChecker gossipsSpreadChecker, BusMover busMover, GossipsSpreader gossipsSpreader) {
+        this.gossipsSpreadChecker = gossipsSpreadChecker;
+        this.busMover = busMover;
+        this.gossipsSpreader = gossipsSpreader;
+    }
+
     String countStopsTillSecretsAreKnownByAll() {
-        stops = 1;
         while(driversStillDontKnowAllGossips() && thereAreMoreStops()){
-            stops++;
-            gossipsSpreadChecker.moveBusesToNextStop();
+            busMover.moveBusesToNextStop();
+            gossipsSpreader.spreadGossips();
+            gossipsSpreadChecker.printGossipsKnownByBuses();
+            ticks++;
         }
-        return thereAreMoreStops() ? formatResponse(stops) : NEVER;
+        return thereAreMoreStops() ? formatResponse(ticks) : NEVER;
     }
 
     private boolean driversStillDontKnowAllGossips() {
@@ -23,7 +32,7 @@ class MainClass {
     }
 
     private boolean thereAreMoreStops() {
-        return stops < STOPS_LIMIT;
+        return ticks < STOPS_LIMIT;
     }
 
     private String formatResponse(int stops) {
