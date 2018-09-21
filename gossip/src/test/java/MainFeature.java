@@ -70,6 +70,36 @@ public class MainFeature {
 
         assertThat(mainClass.countStopsTillSecretsAreKnownByAll(),is("never"));
     }
+
+
+    @Test
+    public void return1IfallbussesShareAllGosipsFromTheFirstStop(){
+        // 2 1 2
+        // 2 2 8
+
+        Bus bus1 = new Bus(1,2);
+        Bus bus2 = new Bus(2,2);
+        BusStop stop1 = new BusStop(1);
+        BusStop stop2 = new BusStop(2);
+        BusStop stop5 = new BusStop(5);
+        BusStop stop8 = new BusStop(8);
+        RouteStopsEnumerator routeA = new RouteStopsEnumerator(stop2,stop1,stop2);
+        RouteStopsEnumerator routeB = new RouteStopsEnumerator(stop2,stop5,stop8);
+
+        BusMover busMover = new BusMover();
+        busMover.addBusToRoute(bus1,routeA);
+        busMover.addBusToRoute(bus2,routeB);
+
+        GossipsSpreadChecker gossipsSpreadChecker = new GossipsSpreadChecker();
+        gossipsSpreadChecker.addBus(bus1);
+        gossipsSpreadChecker.addBus(bus2);
+
+        GossipsSpreader gossipsSpreader = new GossipsSpreader(stop1,stop2,stop5, stop8);
+
+        MainClass mainClass = new MainClass(gossipsSpreadChecker,busMover,gossipsSpreader);
+
+        assertThat(mainClass.countStopsTillSecretsAreKnownByAll(),is("1"));
+    }
 }
 
 

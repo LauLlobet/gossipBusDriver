@@ -5,17 +5,20 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class MainClassShould {
 
     @Mock
+    private
     GossipsSpreadChecker gossipsSpreadChecker;
 
-    //stubs
+    @Mock
+    private BusMover dummyBusMover;
+    @Mock
+    private GossipsSpreader dummyGossipSpreader;
+
     @Test
     public void countMinutesStopsSecretsAreKnownByAll(){
         when(gossipsSpreadChecker.doAllDriversKnowAllGossips())
@@ -23,14 +26,14 @@ public class MainClassShould {
                 .thenReturn(false)
                 .thenReturn(true);
 
-        assertThat(new MainClass(gossipsSpreadChecker).countStopsTillSecretsAreKnownByAll(),is("3"));
+        assertThat(new MainClass(gossipsSpreadChecker, dummyBusMover,dummyGossipSpreader).countStopsTillSecretsAreKnownByAll(),is("3"));
     }
 
     @Test
     public void returnNeverIfLimitIsPassed() {
         when(gossipsSpreadChecker.doAllDriversKnowAllGossips()).thenReturn(false);
 
-        assertThat(new MainClass(gossipsSpreadChecker).countStopsTillSecretsAreKnownByAll(),is("never"));
+        assertThat(new MainClass(gossipsSpreadChecker, dummyBusMover,dummyGossipSpreader).countStopsTillSecretsAreKnownByAll(),is("never"));
     }
 
 }

@@ -1,20 +1,23 @@
 class MainClass {
 
-    public static final String NEVER = "never";
-    public static final int STOPS_LIMIT = 480;
+    private static final String NEVER = "never";
+    private static final int STOPS_LIMIT = 480;
+
     private GossipsSpreadChecker gossipsSpreadChecker;
     private BusMover busMover;
     private GossipsSpreader gossipsSpreader;
-    private int ticks = 0;
+    private int ticks = 1;
 
-    MainClass(GossipsSpreadChecker gossipsSpreadChecker) {
-        this.gossipsSpreadChecker = gossipsSpreadChecker;
-    }
-
-    public MainClass(GossipsSpreadChecker gossipsSpreadChecker, BusMover busMover, GossipsSpreader gossipsSpreader) {
+    MainClass(GossipsSpreadChecker gossipsSpreadChecker, BusMover busMover, GossipsSpreader gossipsSpreader) {
         this.gossipsSpreadChecker = gossipsSpreadChecker;
         this.busMover = busMover;
         this.gossipsSpreader = gossipsSpreader;
+        setFirstStopConditions();
+    }
+
+    private void setFirstStopConditions() {
+        busMover.setBusesToFirstStop();
+        gossipsSpreader.spreadGossips();
     }
 
     String countStopsTillSecretsAreKnownByAll() {

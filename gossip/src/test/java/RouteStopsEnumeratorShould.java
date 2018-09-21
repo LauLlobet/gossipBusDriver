@@ -12,10 +12,8 @@ public class RouteStopsEnumeratorShould {
                 new BusStop(2),
                 new BusStop(8),
                 new BusStop(3),
-                new BusStop(7));
-        route.goToNextStop();
-        assertThat(route.actualStop().id(),is(9));
-        route.goToNextStop();
+                new BusStop(7))
+                ;
         assertThat(route.actualStop().id(),is(9));
         route.goToNextStop();
         assertThat(route.actualStop().id(),is(1));

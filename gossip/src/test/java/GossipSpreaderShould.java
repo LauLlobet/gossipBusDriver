@@ -16,10 +16,10 @@ public class GossipSpreaderShould {
     public void spreadGossipsInAStop(){
         BusStop stop1 = new BusStop(2);
         BusStop stop2 = new BusStop(3);
-        stop1.arrives(bus1atStop1);
-        stop1.arrives(bus2atStop1);
-        stop2.arrives(bus3atStop2);
-        stop2.arrives(bus4atStop2);
+        stop1.isVisitedBy(bus1atStop1);
+        stop1.isVisitedBy(bus2atStop1);
+        stop2.isVisitedBy(bus3atStop2);
+        stop2.isVisitedBy(bus4atStop2);
         GossipsSpreader gossipsSpreader = new GossipsSpreader(stop1, stop2);
 
         gossipsSpreader.spreadGossips();

@@ -4,22 +4,32 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class BusShould {
+
+    private int idCounter = 0;
+    private static final int NULL_INT_NEVER_USED = 0;
+
     @Test
-    public void knowIfheKnowsAllGossipsIfHeHasKnownAllBuses(){
-        Bus bus = new Bus(1,3);
+    public void knowIfItKnowsAllGossipsWhenHeHasKnownAllBuses(){
+        Bus bus1 = new Bus(12345, 3);
+        Bus bus2 = createABus();
 
-        bus.getToKnowGossipsFrom(new Bus(2,0));
-        bus.getToKnowGossipsFrom(new Bus(3, 0));
+        bus2.getToKnowGossipsFrom(createABus());
+        bus1.getToKnowGossipsFrom(bus2);
 
-        assertThat(bus.knowsAllGossips(),is(true));
+        assertThat(bus1.knowsAllGossips(),is(true));
     }
 
     @Test
-    public void notKnoewAllGossipsIfItHasNotKnownAllBuses(){
-        Bus bus = new Bus(1,3);
+    public void notKnowAllGossipsIfItHasNotKnownAllBuses(){
+        Bus bus =  new Bus(12345, 3);
 
-        bus.getToKnowGossipsFrom(new Bus(2,0));
+        bus.getToKnowGossipsFrom(createABus());
 
         assertThat(bus.knowsAllGossips(),is(false));
+    }
+
+    private Bus createABus() {
+        idCounter++;
+        return new Bus(idCounter, NULL_INT_NEVER_USED);
     }
 }
