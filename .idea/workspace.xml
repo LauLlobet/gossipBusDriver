@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4750bfc-bf55-42a7-912c-db3f34e46635" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/src/main/java/BusMover.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/main/java/BusMover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/src/main/java/BusStop.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/main/java/BusStop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/src/main/java/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/main/java/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/src/test/java/BusMoverShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/test/java/BusMoverShould.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gossip/src/test/java/BusShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/test/java/BusShould.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/src/test/java/BusStopShould.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/src/test/java/GossipSpreaderShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/test/java/GossipSpreaderShould.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/src/test/java/MainClassShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/test/java/MainClassShould.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/src/test/java/MainFeature.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/test/java/MainFeature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/src/test/java/RouteStopsEnumeratorShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/src/test/java/RouteStopsEnumeratorShould.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/target/classes/BusMover.class" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/target/classes/BusMover.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/target/classes/BusStop.class" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/target/classes/BusStop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/target/classes/MainClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/target/classes/MainClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/target/test-classes/BusMoverShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/target/test-classes/BusMoverShould.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/target/test-classes/BusShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/target/test-classes/BusShould.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/target/test-classes/BusStopShould.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/target/test-classes/GossipSpreaderShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/target/test-classes/GossipSpreaderShould.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/target/test-classes/MainClassShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/target/test-classes/MainClassShould.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/target/test-classes/MainFeature.class" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/target/test-classes/MainFeature.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gossip/target/test-classes/RouteStopsEnumeratorShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/gossip/target/test-classes/RouteStopsEnumeratorShould.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/gossip/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,10 +26,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainClassShould.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainClassShould.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gossip/src/test/java/MainClassShould.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="174">
               <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -82,8 +62,8 @@
       <file leaf-file-name="RouteStopsEnumeratorShould.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gossip/src/test/java/RouteStopsEnumeratorShould.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-86">
-              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+            <state relative-caret-position="390">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,7 +87,7 @@
       <file leaf-file-name="BusMoverShould.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gossip/src/test/java/BusMoverShould.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
+            <state relative-caret-position="450">
               <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -116,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BusShould.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BusShould.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gossip/src/test/java/BusShould.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+            <state relative-caret-position="165">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -211,9 +191,9 @@
         <option value="$PROJECT_DIR$/gossip/src/test/java/BusMoverShould.java" />
         <option value="$PROJECT_DIR$/gossip/src/main/java/BusStop.java" />
         <option value="$PROJECT_DIR$/gossip/src/test/java/RouteStopsEnumeratorShould.java" />
-        <option value="$PROJECT_DIR$/gossip/src/test/java/BusShould.java" />
         <option value="$PROJECT_DIR$/gossip/src/main/java/MainClass.java" />
         <option value="$PROJECT_DIR$/gossip/src/test/java/MainClassShould.java" />
+        <option value="$PROJECT_DIR$/gossip/src/test/java/BusShould.java" />
       </list>
     </option>
   </component>
@@ -233,10 +213,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="797" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="-2339" />
+    <option name="y" value="-1440" />
+    <option name="width" value="2560" />
+    <option name="height" value="1440" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -492,14 +473,11 @@
       <option name="presentableId" value="Default" />
       <updated>1537270318576</updated>
       <workItem from="1537270321193" duration="8573000" />
-      <workItem from="1537371880619" duration="17671000" />
+      <workItem from="1537371880619" duration="19559000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BusMoverShould_moveTheBusToNextStop - 2018.09.21 at 19h 16m 47s.xml">
-      <configuration name="BusMoverShould.moveTheBusToNextStop" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BusMoverShould_moveTheBusToNextStop - 2018.09.21 at 19h 17m 46s.xml">
       <configuration name="BusMoverShould.moveTheBusToNextStop" configurationId="JUnit" />
     </history-entry>
@@ -527,12 +505,15 @@
     <history-entry file="MainClassShould - 2018.09.21 at 19h 56m 25s.xml">
       <configuration name="MainClassShould" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MainClassShould - 2018.09.21 at 19h 57m 11s.xml">
+      <configuration name="MainClassShould" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26244000" />
+    <option name="totallyTimeSpent" value="28132000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="797" extended-state="0" />
+    <frame x="-2339" y="-1440" width="2560" height="1440" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -544,12 +525,12 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3293944" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.12220566" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3293944" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23748212" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13185067" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293944" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -780,16 +761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gossip/src/test/java/BusMoverShould.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gossip/src/test/java/BusStopShould.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -838,26 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gossip/src/test/java/RouteStopsEnumeratorShould.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-86">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gossip/src/test/java/BusShould.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gossip/src/main/java/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -867,8 +818,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gossip/src/test/java/MainClassShould.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="174">
           <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gossip/src/test/java/RouteStopsEnumeratorShould.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gossip/src/test/java/BusMoverShould.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gossip/src/test/java/BusShould.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

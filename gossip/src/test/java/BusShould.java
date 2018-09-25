@@ -9,11 +9,12 @@ public class BusShould {
     private static final int NULL_INT_NEVER_USED = 0;
 
     @Test
-    public void knowIfItKnowsAllGossipsWhenHeHasKnownAllBuses(){
+    public void tellIfItKnowsAllGossipsWhenHeHasKnownAllBuses(){
         Bus bus1 = new Bus(12345, 3);
         Bus bus2 = createABus();
 
         bus2.getToKnowGossipsFrom(createABus());
+
         bus1.getToKnowGossipsFrom(bus2);
 
         assertThat(bus1.knowsAllGossips(),is(true));
