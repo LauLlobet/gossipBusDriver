@@ -24,7 +24,6 @@ class MainClass {
         while(driversStillDontKnowAllGossips() && thereAreMoreStops()){
             busMover.moveBusesToNextStop();
             gossipsSpreader.spreadGossips();
-            gossipsSpreadChecker.printGossipsKnownByBuses();
             ticks++;
         }
         return thereAreMoreStops() ? formatResponse(ticks) : NEVER;

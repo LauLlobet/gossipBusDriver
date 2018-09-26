@@ -20,9 +20,9 @@ public class MainFeature {
         BusStop stop3 = new BusStop(3);
         BusStop stop4 = new BusStop(4);
         BusStop stop5 = new BusStop(5);
-        RouteStopsEnumerator routeA = new RouteStopsEnumerator(stop3,stop1,stop2,stop3);
-        RouteStopsEnumerator routeB = new RouteStopsEnumerator(stop3,stop2,stop3,stop1);
-        RouteStopsEnumerator routeC = new RouteStopsEnumerator(stop4,stop2,stop3,stop4,stop5);
+        CircularRouteStopsEnumerator routeA = new CircularRouteStopsEnumerator(stop3,stop1,stop2,stop3);
+        CircularRouteStopsEnumerator routeB = new CircularRouteStopsEnumerator(stop3,stop2,stop3,stop1);
+        CircularRouteStopsEnumerator routeC = new CircularRouteStopsEnumerator(stop4,stop2,stop3,stop4,stop5);
 
         BusMover busMover = new BusMover();
         busMover.addBusToRoute(bus1,routeA);
@@ -53,8 +53,8 @@ public class MainFeature {
         BusStop stop2 = new BusStop(2);
         BusStop stop5 = new BusStop(5);
         BusStop stop8 = new BusStop(8);
-        RouteStopsEnumerator routeA = new RouteStopsEnumerator(stop2,stop1,stop2);
-        RouteStopsEnumerator routeB = new RouteStopsEnumerator(stop5,stop2,stop8);
+        CircularRouteStopsEnumerator routeA = new CircularRouteStopsEnumerator(stop2,stop1,stop2);
+        CircularRouteStopsEnumerator routeB = new CircularRouteStopsEnumerator(stop5,stop2,stop8);
 
         BusMover busMover = new BusMover();
         busMover.addBusToRoute(bus1,routeA);
@@ -83,8 +83,8 @@ public class MainFeature {
         BusStop stop2 = new BusStop(2);
         BusStop stop5 = new BusStop(5);
         BusStop stop8 = new BusStop(8);
-        RouteStopsEnumerator routeA = new RouteStopsEnumerator(stop2,stop1,stop2);
-        RouteStopsEnumerator routeB = new RouteStopsEnumerator(stop2,stop5,stop8);
+        CircularRouteStopsEnumerator routeA = new CircularRouteStopsEnumerator(stop2,stop1,stop2);
+        CircularRouteStopsEnumerator routeB = new CircularRouteStopsEnumerator(stop2,stop5,stop8);
 
         BusMover busMover = new BusMover();
         busMover.addBusToRoute(bus1,routeA);

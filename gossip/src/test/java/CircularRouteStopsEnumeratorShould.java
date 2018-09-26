@@ -3,10 +3,10 @@ import org.junit.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
 
-public class RouteStopsEnumeratorShould {
+public class CircularRouteStopsEnumeratorShould {
     @Test
     public void returnStopsOneFterTheOther(){
-        RouteStopsEnumerator route = new RouteStopsEnumerator(
+        CircularRouteStopsEnumerator route = new CircularRouteStopsEnumerator(
                 new BusStop(9),
                 new BusStop(1),
                 new BusStop(2),
@@ -27,7 +27,7 @@ public class RouteStopsEnumeratorShould {
 
     @Test
     public void beCircular(){
-        RouteStopsEnumerator route = new RouteStopsEnumerator(
+        CircularRouteStopsEnumerator route = new CircularRouteStopsEnumerator(
                 new BusStop(1),
                 new BusStop(2),
                 new BusStop(3));
