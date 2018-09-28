@@ -73,7 +73,7 @@ public class MainFeature {
 
 
     @Test
-    public void return1IfallbussesShareAllGosipsFromTheFirstStop(){
+    public void return_1_IfallbussesShareAllGosipsFromTheFirstStop(){
         // 2 1 2
         // 2 2 8
 
@@ -99,6 +99,35 @@ public class MainFeature {
         MainClass mainClass = new MainClass(gossipsSpreadChecker,busMover,gossipsSpreader);
 
         assertThat(mainClass.countStopsTillSecretsAreKnownByAll(),is("1"));
+    }
+
+    @Test
+    public void workWithComeAndGoStops(){
+        // 3 2 1  // 3 2 1
+        // 2 1 2  // 1 2 1   5
+
+        Bus bus1 = new Bus(1,2);
+        Bus bus2 = new Bus(2,2);
+        BusStop stop1 = new BusStop(1);
+        BusStop stop2 = new BusStop(2);
+        BusStop stop3 = new BusStop(3);
+        CircularRouteStopsEnumerator routeA = new CircularRouteStopsEnumerator(stop3,stop2,stop1);
+        ComeAndGoRouteStopsEnumerator routeB = new ComeAndGoRouteStopsEnumerator(stop2,stop1,stop2);
+
+        BusMover busMover = new BusMover();
+        busMover.addBusToRoute(bus1,routeA);
+        busMover.addBusToRoute(bus2,routeB);
+
+        GossipsSpreadChecker gossipsSpreadChecker = new GossipsSpreadChecker();
+        gossipsSpreadChecker.addBus(bus1);
+        gossipsSpreadChecker.addBus(bus2);
+
+        GossipsSpreader gossipsSpreader = new GossipsSpreader(stop1,stop2,stop3);
+
+        MainClass mainClass = new MainClass(gossipsSpreadChecker,busMover,gossipsSpreader);
+
+        assertThat(mainClass.countStopsTillSecretsAreKnownByAll(),is("5"));
+
     }
 }
 
