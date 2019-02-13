@@ -6,7 +6,7 @@ import static org.hamcrest.CoreMatchers.is;
 public class CircularRouteStopsEnumeratorShould {
     @Test
     public void returnStopsOneFterTheOther(){
-        CircularRouteStopsEnumerator route = new CircularRouteStopsEnumerator(
+        CircularStopsEnumerator route = new CircularStopsEnumerator(
                 new BusStop(9),
                 new BusStop(1),
                 new BusStop(2),
@@ -27,7 +27,7 @@ public class CircularRouteStopsEnumeratorShould {
 
     @Test
     public void beCircular(){
-        CircularRouteStopsEnumerator route = new CircularRouteStopsEnumerator(
+        CircularStopsEnumerator route = new CircularStopsEnumerator(
                 new BusStop(1),
                 new BusStop(2),
                 new BusStop(3));

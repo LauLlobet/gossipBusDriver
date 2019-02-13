@@ -1,14 +1,13 @@
-public class ComeAndGoRouteStopsEnumerator implements RouteStopsEnumerator{
+public class ComeAndGoStopsEnumerator implements RouteStopsEnumerator{
     private BusStop[] stops;
     private int currentStop = 0;
     private int direction = 1;
 
-    public ComeAndGoRouteStopsEnumerator(BusStop... stops) {
+    public ComeAndGoStopsEnumerator(BusStop... stops) {
 
         this.stops = stops;
     }
 
-    @Override
     public void goToNextStop() {
         changeDirectionIfReachedTheEnd();
         currentStop+= direction;
@@ -21,7 +20,6 @@ public class ComeAndGoRouteStopsEnumerator implements RouteStopsEnumerator{
         }
     }
 
-    @Override
     public BusStop actualStop() {
         return stops[currentStop];
     }

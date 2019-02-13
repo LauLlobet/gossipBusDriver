@@ -20,9 +20,9 @@ public class MainFeature {
         BusStop stop3 = new BusStop(3);
         BusStop stop4 = new BusStop(4);
         BusStop stop5 = new BusStop(5);
-        CircularRouteStopsEnumerator routeA = new CircularRouteStopsEnumerator(stop3,stop1,stop2,stop3);
-        CircularRouteStopsEnumerator routeB = new CircularRouteStopsEnumerator(stop3,stop2,stop3,stop1);
-        CircularRouteStopsEnumerator routeC = new CircularRouteStopsEnumerator(stop4,stop2,stop3,stop4,stop5);
+        CircularStopsEnumerator routeA = new CircularStopsEnumerator(stop3,stop1,stop2,stop3);
+        CircularStopsEnumerator routeB = new CircularStopsEnumerator(stop3,stop2,stop3,stop1);
+        CircularStopsEnumerator routeC = new CircularStopsEnumerator(stop4,stop2,stop3,stop4,stop5);
 
         BusMover busMover = new BusMover();
         busMover.addBusToRoute(bus1,routeA);
@@ -53,8 +53,8 @@ public class MainFeature {
         BusStop stop2 = new BusStop(2);
         BusStop stop5 = new BusStop(5);
         BusStop stop8 = new BusStop(8);
-        CircularRouteStopsEnumerator routeA = new CircularRouteStopsEnumerator(stop2,stop1,stop2);
-        CircularRouteStopsEnumerator routeB = new CircularRouteStopsEnumerator(stop5,stop2,stop8);
+        CircularStopsEnumerator routeA = new CircularStopsEnumerator(stop2,stop1,stop2);
+        CircularStopsEnumerator routeB = new CircularStopsEnumerator(stop5,stop2,stop8);
 
         BusMover busMover = new BusMover();
         busMover.addBusToRoute(bus1,routeA);
@@ -83,8 +83,8 @@ public class MainFeature {
         BusStop stop2 = new BusStop(2);
         BusStop stop5 = new BusStop(5);
         BusStop stop8 = new BusStop(8);
-        CircularRouteStopsEnumerator routeA = new CircularRouteStopsEnumerator(stop2,stop1,stop2);
-        CircularRouteStopsEnumerator routeB = new CircularRouteStopsEnumerator(stop2,stop5,stop8);
+        CircularStopsEnumerator routeA = new CircularStopsEnumerator(stop2,stop1,stop2);
+        CircularStopsEnumerator routeB = new CircularStopsEnumerator(stop2,stop5,stop8);
 
         BusMover busMover = new BusMover();
         busMover.addBusToRoute(bus1,routeA);
@@ -111,8 +111,8 @@ public class MainFeature {
         BusStop stop1 = new BusStop(1);
         BusStop stop2 = new BusStop(2);
         BusStop stop3 = new BusStop(3);
-        CircularRouteStopsEnumerator routeA = new CircularRouteStopsEnumerator(stop3,stop2,stop1);
-        ComeAndGoRouteStopsEnumerator routeB = new ComeAndGoRouteStopsEnumerator(stop2,stop1,stop2);
+        CircularStopsEnumerator routeA = new CircularStopsEnumerator(stop3,stop2,stop1);
+        ComeAndGoStopsEnumerator routeB = new ComeAndGoStopsEnumerator(stop2,stop1,stop2);
 
         BusMover busMover = new BusMover();
         busMover.addBusToRoute(bus1,routeA);

@@ -1,12 +1,11 @@
-class CircularRouteStopsEnumerator implements RouteStopsEnumerator {
+class CircularStopsEnumerator implements RouteStopsEnumerator {
     private BusStop[] stops;
     private int currentStop = 0;
 
-    CircularRouteStopsEnumerator(BusStop... stops) {
+    CircularStopsEnumerator(BusStop... stops) {
         this.stops = stops;
     }
 
-    @Override
     public void goToNextStop() {
         currentStop++;
         resetStopIfReachedTheEnd();
@@ -18,7 +17,6 @@ class CircularRouteStopsEnumerator implements RouteStopsEnumerator {
         }
     }
 
-    @Override
     public BusStop actualStop() {
         return stops[currentStop];
     }

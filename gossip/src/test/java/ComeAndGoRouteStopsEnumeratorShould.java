@@ -7,7 +7,7 @@ public class ComeAndGoRouteStopsEnumeratorShould {
 
     @Test
     public void turnBackWhenTheEndIsReached(){
-        ComeAndGoRouteStopsEnumerator route = new ComeAndGoRouteStopsEnumerator(new BusStop(1),
+        ComeAndGoStopsEnumerator route = new ComeAndGoStopsEnumerator(new BusStop(1),
                 new BusStop(2),
                 new BusStop(3));
 
