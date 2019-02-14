@@ -8,9 +8,9 @@ public class Bus implements Comparable<Bus> {
     private int totalOfBuses;
 
 
-    public Bus(int id, int numberOfBuses) {
+    public Bus(int id, int numberOfAllBuses) {
         this.id = id;
-        totalOfBuses = numberOfBuses;
+        totalOfBuses = numberOfAllBuses;
         meetBuses.add(this);
     }
 

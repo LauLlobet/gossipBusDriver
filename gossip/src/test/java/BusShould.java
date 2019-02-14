@@ -9,11 +9,11 @@ public class BusShould {
     private static final int NULL_INT_NEVER_USED = 0;
 
     @Test
-    public void tellIfItKnowsAllGossipsWhenHeHasKnownAllBuses(){
+    public void tellIfItKnowsAllGossipsWhenHeHasKnownAllTheRestOfBuses(){
         Bus bus1 = new Bus(12345, 3);
-        Bus bus2 = createABus();
+        Bus bus2 = aBus();
 
-        bus2.getToKnowGossipsFrom(createABus());
+        bus2.getToKnowGossipsFrom(aBus());
 
         bus1.getToKnowGossipsFrom(bus2);
 
@@ -24,12 +24,12 @@ public class BusShould {
     public void notKnowAllGossipsIfItHasNotKnownAllBuses(){
         Bus bus =  new Bus(12345, 3);
 
-        bus.getToKnowGossipsFrom(createABus());
+        bus.getToKnowGossipsFrom(aBus());
 
         assertThat(bus.knowsAllGossips(),is(false));
     }
 
-    private Bus createABus() {
+    private Bus aBus() {
         idCounter++;
         return new Bus(idCounter, NULL_INT_NEVER_USED);
     }

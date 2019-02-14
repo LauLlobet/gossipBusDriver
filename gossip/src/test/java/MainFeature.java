@@ -20,9 +20,9 @@ public class MainFeature {
         BusStop stop3 = new BusStop(3);
         BusStop stop4 = new BusStop(4);
         BusStop stop5 = new BusStop(5);
-        RouteStopsEnumerator routeA = new RouteStopsEnumerator(stop3,stop1,stop2,stop3);
-        RouteStopsEnumerator routeB = new RouteStopsEnumerator(stop3,stop2,stop3,stop1);
-        RouteStopsEnumerator routeC = new RouteStopsEnumerator(stop4,stop2,stop3,stop4,stop5);
+        CircularStopsEnumerator routeA = new CircularStopsEnumerator(stop3,stop1,stop2,stop3);
+        CircularStopsEnumerator routeB = new CircularStopsEnumerator(stop3,stop2,stop3,stop1);
+        CircularStopsEnumerator routeC = new CircularStopsEnumerator(stop4,stop2,stop3,stop4,stop5);
 
         BusMover busMover = new BusMover();
         busMover.addBusToRoute(bus1,routeA);
@@ -53,8 +53,8 @@ public class MainFeature {
         BusStop stop2 = new BusStop(2);
         BusStop stop5 = new BusStop(5);
         BusStop stop8 = new BusStop(8);
-        RouteStopsEnumerator routeA = new RouteStopsEnumerator(stop2,stop1,stop2);
-        RouteStopsEnumerator routeB = new RouteStopsEnumerator(stop5,stop2,stop8);
+        CircularStopsEnumerator routeA = new CircularStopsEnumerator(stop2,stop1,stop2);
+        CircularStopsEnumerator routeB = new CircularStopsEnumerator(stop5,stop2,stop8);
 
         BusMover busMover = new BusMover();
         busMover.addBusToRoute(bus1,routeA);
@@ -73,7 +73,7 @@ public class MainFeature {
 
 
     @Test
-    public void return1IfallbussesShareAllGosipsFromTheFirstStop(){
+    public void return_1_IfallbussesShareAllGosipsFromTheFirstStop(){
         // 2 1 2
         // 2 2 8
 
@@ -83,8 +83,8 @@ public class MainFeature {
         BusStop stop2 = new BusStop(2);
         BusStop stop5 = new BusStop(5);
         BusStop stop8 = new BusStop(8);
-        RouteStopsEnumerator routeA = new RouteStopsEnumerator(stop2,stop1,stop2);
-        RouteStopsEnumerator routeB = new RouteStopsEnumerator(stop2,stop5,stop8);
+        CircularStopsEnumerator routeA = new CircularStopsEnumerator(stop2,stop1,stop2);
+        CircularStopsEnumerator routeB = new CircularStopsEnumerator(stop2,stop5,stop8);
 
         BusMover busMover = new BusMover();
         busMover.addBusToRoute(bus1,routeA);
@@ -99,6 +99,35 @@ public class MainFeature {
         MainClass mainClass = new MainClass(gossipsSpreadChecker,busMover,gossipsSpreader);
 
         assertThat(mainClass.countStopsTillSecretsAreKnownByAll(),is("1"));
+    }
+
+    @Test
+    public void workWithComeAndGoStops(){
+        // 3 2 1  // 3 2 1
+        // 2 1 2  // 1 2 1   5
+
+        Bus bus1 = new Bus(1,2);
+        Bus bus2 = new Bus(2,2);
+        BusStop stop1 = new BusStop(1);
+        BusStop stop2 = new BusStop(2);
+        BusStop stop3 = new BusStop(3);
+        CircularStopsEnumerator routeA = new CircularStopsEnumerator(stop3,stop2,stop1);
+        ComeAndGoStopsEnumerator routeB = new ComeAndGoStopsEnumerator(stop2,stop1,stop2);
+
+        BusMover busMover = new BusMover();
+        busMover.addBusToRoute(bus1,routeA);
+        busMover.addBusToRoute(bus2,routeB);
+
+        GossipsSpreadChecker gossipsSpreadChecker = new GossipsSpreadChecker();
+        gossipsSpreadChecker.addBus(bus1);
+        gossipsSpreadChecker.addBus(bus2);
+
+        GossipsSpreader gossipsSpreader = new GossipsSpreader(stop1,stop2,stop3);
+
+        MainClass mainClass = new MainClass(gossipsSpreadChecker,busMover,gossipsSpreader);
+
+        assertThat(mainClass.countStopsTillSecretsAreKnownByAll(),is("5"));
+
     }
 }
 
