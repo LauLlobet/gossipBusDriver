@@ -1,4 +1,5 @@
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class EnumeratorLister {
@@ -14,8 +15,14 @@ public class EnumeratorLister {
         return new EnumeratorLister(list);
     }
 
-    public BusStop[] sleepingAt(BusStop busStop1) {
-        BusStop[] outputList = { busStop1, busStop1, list[1] };
-        return outputList;
+    public BusStop[] sleepingAt(BusStop toNapBusStop) {
+        ArrayList<BusStop> outputList = new ArrayList<BusStop>();
+        for (BusStop bs: list) {
+            outputList.add(bs);
+            if(bs.equals(toNapBusStop)){
+                outputList.add(bs);
+            }
+        }
+        return outputList.toArray(new BusStop[0]);
     }
 }
