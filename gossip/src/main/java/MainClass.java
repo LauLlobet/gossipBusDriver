@@ -29,7 +29,7 @@ class MainClass {
         return thereAreMoreStops() ? formatResponse(ticks) : NEVER;
     }
 
-    private boolean driversStillDontKnowAllGossips() {
+    public boolean driversStillDontKnowAllGossips() {
         return ! gossipsSpreadChecker.doAllDriversKnowAllGossips();
     }
 

@@ -14,6 +14,7 @@ public class BusStop {
     }
 
     public void isVisitedBy(Bus bus) {
+        System.out.println(bus.toString()+" visited "+ id);
         buses.add(bus);
     }
 

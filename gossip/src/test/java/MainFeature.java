@@ -131,19 +131,21 @@ public class MainFeature {
     }
 
 
-    
+
     @Test
     public void allow_the_use_of_nap_bus_stops() {
-        // 1 2  1 2 1  2
+        // 3 2  1 2 1  2
         // 1 1z 2 1 1z 2 (with only two stops)
 
         GossipsSpreadChecker gossipChecker = new GossipsSpreadChecker();
         BusMover busMover = new BusMover();
-        GossipsSpreader gossipSpreader = new GossipsSpreader();
 
         BusStop busStop1 = new BusStop(1);
         BusStop busStop2 = new BusStop(2);
-        RouteStopsEnumerator route12 = new CircularStopsEnumerator(busStop1, busStop2);
+        BusStop busStop3 = new BusStop(3);
+
+        GossipsSpreader gossipSpreader = new GossipsSpreader(busStop1,busStop2,busStop3);
+        RouteStopsEnumerator route12 = new CircularStopsEnumerator(busStop3, busStop2, busStop1, busStop2, busStop1, busStop2);
         RouteStopsEnumerator route1z2 = new CircularStopsEnumerator(EnumeratorLister.of(busStop1,busStop2).sleepingAt(busStop1));
         Bus bus1 = new Bus(1,2);
         Bus bus2 = new Bus(2,2);
@@ -151,8 +153,12 @@ public class MainFeature {
         busMover.addBusToRoute(bus1,route12);
         busMover.addBusToRoute(bus2,route1z2);
 
+        gossipChecker.addBus(bus1);
+        gossipChecker.addBus(bus2);
+
+
         MainClass mainClass = new MainClass(gossipChecker,busMover,gossipSpreader);
-        assertThat(mainClass.countStopsTillSecretsAreKnownByAll(),is("4"));
+        assertThat(mainClass.countStopsTillSecretsAreKnownByAll(),is("5"));
     }
 }
 
