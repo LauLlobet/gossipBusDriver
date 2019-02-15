@@ -12,6 +12,11 @@ import static org.hamcrest.CoreMatchers.is;
 public class MainFeature {
     @Test
     public void countStopsTillGossipsAreOk(){
+        //         .
+        // 3 1 2 3 3 1 2 3
+        // 3 2 3 1 3 2 3 1
+        // 4 2 3 4 5 4 2 3
+
         Bus bus1 = new Bus(1,3);
         Bus bus2 = new Bus(2,3);
         Bus bus3 = new Bus(3,3);
@@ -21,7 +26,7 @@ public class MainFeature {
         BusStop stop4 = new BusStop(4);
         BusStop stop5 = new BusStop(5);
         CircularStopsEnumerator routeA = new CircularStopsEnumerator(stop3,stop1,stop2,stop3);
-        CircularStopsEnumerator routeB = new CircularStopsEnumerator(stop3,stop2,stop3,stop1);
+        CircularStopsEnumerator routeB = new CircularStopsEnumerator(stop5,stop2,stop3,stop1,stop3);
         CircularStopsEnumerator routeC = new CircularStopsEnumerator(stop4,stop2,stop3,stop4,stop5);
 
         BusMover busMover = new BusMover();

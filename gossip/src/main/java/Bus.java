@@ -3,7 +3,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class Bus implements Comparable<Bus> {
-    private Set<Bus> meetBuses = new TreeSet<>();
+    private Set<Gossip> meetGossips = new TreeSet<>();
     private int id;
     private int totalOfBuses;
 
@@ -11,20 +11,22 @@ public class Bus implements Comparable<Bus> {
     public Bus(int id, int numberOfAllBuses) {
         this.id = id;
         totalOfBuses = numberOfAllBuses;
-        meetBuses.add(this);
+        meetGossips.add(new Gossip(id));
     }
 
     public boolean knowsAllGossips() {
-        return meetBuses.size() >= totalOfBuses;
+        return meetGossips.size() >= totalOfBuses;
     }
 
     public void getToKnowGossipsFrom(Bus bus) {
         System.out.println(this + " knows gossip from "+ bus);
-        meetBuses.addAll(bus.meetBuses);
+        if( ! bus.equals(this)) {
+            meetGossips.addAll(bus.meetGossips);
+        }
     }
 
     public String printKnownGossips(){
-       return id+" knows["+ meetBuses.stream().map(bus -> bus.id + "").reduce("",(x,y)-> x + " " + y)+"]";
+       return id+" knows["+ meetGossips.stream().map(gossip -> gossip.id + "").reduce("",(x, y)-> x + " " + y)+"]";
     }
 
     @Override
@@ -47,7 +49,7 @@ public class Bus implements Comparable<Bus> {
         Bus bus = (Bus) o;
         return id == bus.id &&
                 totalOfBuses == bus.totalOfBuses &&
-                Objects.equals(meetBuses, bus.meetBuses);
+                Objects.equals(meetGossips, bus.meetGossips);
     }
 
     @Override
