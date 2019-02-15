@@ -1,5 +1,7 @@
 import org.junit.Test;
 
+import java.math.BigInteger;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -27,6 +29,21 @@ public class BusShould {
         bus.getToKnowGossipsFrom(aBus());
 
         assertThat(bus.knowsAllGossips(),is(false));
+    }
+
+
+    @Test
+    public void generate_a_gossip() {
+        MutableInt numberOfAllGossips =  new MutableInt(2);
+
+        Bus bus =  new Bus(1, numberOfAllGossips);
+
+        bus.getToKnowGossipsFrom(aBus());
+
+        bus.createAGossip();
+
+        assertThat(bus.knowsAllGossips(),is(true));
+        assertThat(numberOfAllGossips.value(), is(3));
     }
 
     private Bus aBus() {

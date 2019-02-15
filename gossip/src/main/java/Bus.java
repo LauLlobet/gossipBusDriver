@@ -57,4 +57,9 @@ public class Bus implements Comparable<Bus> {
     public int hashCode() {
         return Objects.hash(id);
     }
+
+    public void createAGossip() {
+        meetGossips.add(Gossip.randomGossip());
+        totalOfGossips.add(1);
+    }
 }
