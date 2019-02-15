@@ -19,11 +19,20 @@ public class Bus implements Comparable<Bus> {
     }
 
     public void getToKnowGossipsFrom(Bus bus) {
+        System.out.println(this + " knows gossip from "+ bus);
         meetBuses.addAll(bus.meetBuses);
     }
 
     public String printKnownGossips(){
        return id+" knows["+ meetBuses.stream().map(bus -> bus.id + "").reduce("",(x,y)-> x + " " + y)+"]";
+    }
+
+    @Override
+    public String toString() {
+        return "Bus{" +
+                ", id=" + id +
+                ", totalOfBuses=" + totalOfBuses +
+                '}';
     }
 
     @Override
