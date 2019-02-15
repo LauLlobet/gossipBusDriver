@@ -7,6 +7,10 @@ public class Gossip implements Comparable<Gossip> {
         this.id = ""+id;
     }
 
+    public static Gossip randomGossip() {
+        return new Gossip((int)(Math.random()*10000));
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

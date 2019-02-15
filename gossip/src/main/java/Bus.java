@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
@@ -5,17 +6,17 @@ import java.util.TreeSet;
 public class Bus implements Comparable<Bus> {
     private Set<Gossip> meetGossips = new TreeSet<>();
     private int id;
-    private int totalOfBuses;
+    private MutableInt totalOfGossips;
 
 
-    public Bus(int id, int numberOfAllBuses) {
+    public Bus(int id, MutableInt numberOfAllBuses) {
         this.id = id;
-        totalOfBuses = numberOfAllBuses;
+        totalOfGossips = numberOfAllBuses;
         meetGossips.add(new Gossip(id));
     }
 
-    public boolean knowsAllGossips() {
-        return meetGossips.size() >= totalOfBuses;
+    public boolean knowsAllGossips () {
+        return meetGossips.size() >= totalOfGossips.value();
     }
 
     public void getToKnowGossipsFrom(Bus bus) {
@@ -33,7 +34,7 @@ public class Bus implements Comparable<Bus> {
     public String toString() {
         return "Bus{" +
                 ", id=" + id +
-                ", totalOfBuses=" + totalOfBuses +
+                ", totalOfGossips=" + totalOfGossips +
                 '}';
     }
 
@@ -48,7 +49,7 @@ public class Bus implements Comparable<Bus> {
         if (o == null || getClass() != o.getClass()) return false;
         Bus bus = (Bus) o;
         return id == bus.id &&
-                totalOfBuses == bus.totalOfBuses &&
+                totalOfGossips == bus.totalOfGossips &&
                 Objects.equals(meetGossips, bus.meetGossips);
     }
 

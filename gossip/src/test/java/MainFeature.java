@@ -1,5 +1,7 @@
 import org.junit.Test;
 
+import java.math.BigInteger;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
 
@@ -17,9 +19,10 @@ public class MainFeature {
         // 3 2 3 1 3 2 3 1
         // 4 2 3 4 5 4 2 3
 
-        Bus bus1 = new Bus(1,3);
-        Bus bus2 = new Bus(2,3);
-        Bus bus3 = new Bus(3,3);
+        MutableInt totalOfGossips = new MutableInt(3);
+        Bus bus1 = new Bus(1,totalOfGossips);
+        Bus bus2 = new Bus(2,totalOfGossips);
+        Bus bus3 = new Bus(3,totalOfGossips);
         BusStop stop1 = new BusStop(1);
         BusStop stop2 = new BusStop(2);
         BusStop stop3 = new BusStop(3);
@@ -52,8 +55,10 @@ public class MainFeature {
        // 2 1 2
        // 5 2 8
 
-        Bus bus1 = new Bus(1,2);
-        Bus bus2 = new Bus(2,2);
+        MutableInt totalOfGossips = new MutableInt(2);
+
+        Bus bus1 = new Bus(1,totalOfGossips);
+        Bus bus2 = new Bus(2,totalOfGossips);
         BusStop stop1 = new BusStop(1);
         BusStop stop2 = new BusStop(2);
         BusStop stop5 = new BusStop(5);
@@ -82,8 +87,10 @@ public class MainFeature {
         // 2 1 2
         // 2 2 8
 
-        Bus bus1 = new Bus(1,2);
-        Bus bus2 = new Bus(2,2);
+        MutableInt totalOfGossips = new MutableInt(2);
+
+        Bus bus1 = new Bus(1,totalOfGossips);
+        Bus bus2 = new Bus(2,totalOfGossips);
         BusStop stop1 = new BusStop(1);
         BusStop stop2 = new BusStop(2);
         BusStop stop5 = new BusStop(5);
@@ -111,8 +118,10 @@ public class MainFeature {
         // 3 2 1  // 3 2 1
         // 2 1 2  // 1 2 1   5
 
-        Bus bus1 = new Bus(1,2);
-        Bus bus2 = new Bus(2,2);
+        MutableInt totalOfGossips = new MutableInt(2);
+
+        Bus bus1 = new Bus(1,totalOfGossips);
+        Bus bus2 = new Bus(2,totalOfGossips);
         BusStop stop1 = new BusStop(1);
         BusStop stop2 = new BusStop(2);
         BusStop stop3 = new BusStop(3);
@@ -142,6 +151,8 @@ public class MainFeature {
         // 3 2  1 2 1  2
         // 1 1z 2 1 1z 2 (with only two stops)
 
+        MutableInt totalOfGossips = new MutableInt(2);
+
         GossipsSpreadChecker gossipChecker = new GossipsSpreadChecker();
         BusMover busMover = new BusMover();
 
@@ -152,8 +163,8 @@ public class MainFeature {
         GossipsSpreader gossipSpreader = new GossipsSpreader(busStop1,busStop2,busStop3);
         RouteStopsEnumerator route12 = new CircularStopsEnumerator(busStop3, busStop2, busStop1, busStop2, busStop1, busStop2);
         RouteStopsEnumerator route1z2 = new CircularStopsEnumerator(EnumeratorLister.of(busStop1,busStop2).sleepingAt(busStop1));
-        Bus bus1 = new Bus(1,2);
-        Bus bus2 = new Bus(2,2);
+        Bus bus1 = new Bus(1,totalOfGossips);
+        Bus bus2 = new Bus(2,totalOfGossips);
 
         busMover.addBusToRoute(bus1,route12);
         busMover.addBusToRoute(bus2,route1z2);
