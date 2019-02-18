@@ -1,5 +1,5 @@
 public class ComeAndGoStopsEnumerator implements RouteStopsEnumerator{
-    private BusStop[] stops;
+    private final BusStop[] stops;
     private int currentStop = 0;
     private int direction = 1;
 

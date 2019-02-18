@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
-public class BusMover{
-    private HashMap<Bus, RouteStopsEnumerator> busesWithRoutes;
+class BusMover{
+    private final HashMap<Bus, RouteStopsEnumerator> busesWithRoutes;
 
     public BusMover() {
         busesWithRoutes = new HashMap<>();

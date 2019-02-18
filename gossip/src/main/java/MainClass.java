@@ -3,9 +3,9 @@ class MainClass {
     private static final String NEVER = "never";
     private static final int STOPS_LIMIT = 480;
 
-    private GossipsSpreadChecker gossipsSpreadChecker;
-    private BusMover busMover;
-    private GossipsSpreader gossipsSpreader;
+    private final GossipsSpreadChecker gossipsSpreadChecker;
+    private final BusMover busMover;
+    private final GossipsSpreader gossipsSpreader;
     private int ticks = 1;
 
     MainClass(GossipsSpreadChecker gossipsSpreadChecker, BusMover busMover, GossipsSpreader gossipsSpreader) {
@@ -29,7 +29,7 @@ class MainClass {
         return thereAreMoreStops() ? formatResponse(ticks) : NEVER;
     }
 
-    public boolean driversStillDontKnowAllGossips() {
+    private boolean driversStillDontKnowAllGossips() {
         return ! gossipsSpreadChecker.doAllDriversKnowAllGossips();
     }
 

@@ -1,5 +1,6 @@
 class CircularStopsEnumerator implements RouteStopsEnumerator {
-    private BusStop[] stops;
+    @SuppressWarnings("CanBeFinal")
+    private final BusStop[] stops;
     private int currentStop = 0;
 
     CircularStopsEnumerator(BusStop... stops) {

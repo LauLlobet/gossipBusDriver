@@ -1,4 +1,4 @@
-public interface RouteStopsEnumerator {
+interface RouteStopsEnumerator {
     void goToNextStop();
 
     BusStop actualStop();

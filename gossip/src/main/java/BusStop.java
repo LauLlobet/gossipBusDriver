@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class BusStop {
     private final Set<Bus> buses;
-    private int id;
+    private final int id;
 
     public BusStop(int id) {
         this.id = id;
