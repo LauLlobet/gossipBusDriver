@@ -1,7 +1,7 @@
 import java.util.Objects;
 
 public class Gossip implements Comparable<Gossip> {
-    String id;
+    private final String id;
 
     public Gossip(int id) {
         this.id = ""+id;

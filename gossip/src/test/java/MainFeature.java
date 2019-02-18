@@ -1,7 +1,5 @@
 import org.junit.Test;
 
-import java.math.BigInteger;
-
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.CoreMatchers.is;
 
@@ -83,7 +81,7 @@ public class MainFeature {
 
 
     @Test
-    public void return_1_IfallbussesShareAllGosipsFromTheFirstStop(){
+    public void return_1_If_all_buses_share_all_gossips_from_the_first_stop(){
         // 2 1 2
         // 2 2 8
 
@@ -178,7 +176,7 @@ public class MainFeature {
     }
 
     @Test
-    public void pospone_end_because_of_gossip_generation_when_exactly_6_gossips_are_shared() {
+    public void delay_end_because_of_gossip_generation_when_exactly_6_gossips_are_shared() {
                   //here all buses know all their gossips but 2 are generated
                     //here all buses know all their gossips and all the generated ones
         // 1   1 4 5

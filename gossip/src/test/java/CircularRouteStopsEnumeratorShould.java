@@ -5,7 +5,7 @@ import static org.hamcrest.CoreMatchers.is;
 
 public class CircularRouteStopsEnumeratorShould {
     @Test
-    public void returnStopsOneFterTheOther(){
+    public void returnStopsOneAfterTheOther(){
         CircularStopsEnumerator route = new CircularStopsEnumerator(
                 new BusStop(9),
                 new BusStop(1),

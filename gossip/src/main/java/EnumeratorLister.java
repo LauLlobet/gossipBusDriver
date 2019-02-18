@@ -1,12 +1,10 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class EnumeratorLister {
 
-    BusStop[] list;
+    private final BusStop[] list;
 
-    public EnumeratorLister(BusStop[] list) {
+    private EnumeratorLister(BusStop[] list) {
         this.list = list;
     }
 
@@ -16,7 +14,7 @@ public class EnumeratorLister {
     }
 
     public BusStop[] sleepingAt(BusStop toNapBusStop) {
-        ArrayList<BusStop> outputList = new ArrayList<BusStop>();
+        ArrayList<BusStop> outputList = new ArrayList<>();
         for (BusStop bs: list) {
             outputList.add(bs);
             if(bs.equals(toNapBusStop)){

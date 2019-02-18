@@ -1,8 +1,10 @@
 import java.util.Arrays;
 import java.util.List;
 
-public class GossipsSpreader {
-    private List<BusStop> busStops;
+class GossipsSpreader {
+
+    private static final int NUMBER_OF_SHARED_GOSSIPS_THAT_GENERATES_A_NEW_ONE = 6;
+    private final List<BusStop> busStops;
 
     public GossipsSpreader(BusStop... stops) {
             busStops = Arrays.asList(stops);
@@ -13,6 +15,15 @@ public class GossipsSpreader {
     }
 
     private void spreadGossipsAt(BusStop busStop) {
+        Bus oneBusKnowingAllGossips;
+        oneBusKnowingAllGossips = shareAllGossipsBetweenBusesAt(busStop);
+        if(oneBusKnowingAllGossips != null &&
+                oneBusKnowingAllGossips.knowsNGossips(NUMBER_OF_SHARED_GOSSIPS_THAT_GENERATES_A_NEW_ONE)){
+            generateAndShareNewGossip(busStop, oneBusKnowingAllGossips);
+        }
+    }
+
+    private Bus shareAllGossipsBetweenBusesAt(BusStop busStop) {
         Bus lastGossipListenerBus = null;
         for(Bus gossipListenerBus : busStop.getBuses() ){
             for(Bus gossipTellerBus: busStop.getBuses()){
@@ -20,10 +31,12 @@ public class GossipsSpreader {
                 lastGossipListenerBus = gossipListenerBus;
             }
         }
-        if(lastGossipListenerBus != null && lastGossipListenerBus.knowsNGossips(6)){
-            lastGossipListenerBus.createAGossip();
-            spreadGossipsAt(busStop);
-        }
+        return lastGossipListenerBus;
+    }
+
+    private void generateAndShareNewGossip(BusStop busStop, Bus lastGossipListenerBus) {
+        lastGossipListenerBus.createAGossip();
+        spreadGossipsAt(busStop);
     }
 
 }

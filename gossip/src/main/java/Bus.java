@@ -1,13 +1,11 @@
-import java.math.BigInteger;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
-import java.util.TreeSet;
 
-public class Bus implements Comparable<Bus> {
-    private Set<Gossip> meetGossips = new HashSet<>();
-    private int id;
-    private MutableInt totalOfGossips;
+class Bus implements Comparable<Bus> {
+    private final Set<Gossip> meetGossips = new HashSet<>();
+    private final int id;
+    private final MutableInt totalOfGossips;
 
 
     public Bus(int id, MutableInt numberOfAllBuses) {
@@ -25,10 +23,6 @@ public class Bus implements Comparable<Bus> {
         if( ! bus.equals(this)) {
             meetGossips.addAll(bus.meetGossips);
         }
-    }
-
-    public String printKnownGossips(){
-       return id+" knows["+ meetGossips.stream().map(gossip -> gossip.id + "").reduce("",(x, y)-> x + " " + y)+"]";
     }
 
     @Override
