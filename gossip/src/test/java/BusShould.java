@@ -7,7 +7,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class BusShould {
 
-    private int idCounter = 0;
+    private int idCounter = 9999;
     private static final MutableInt NULL_INT_NEVER_USED = null;
 
     @Test

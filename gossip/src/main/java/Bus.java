@@ -1,10 +1,11 @@
 import java.math.BigInteger;
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class Bus implements Comparable<Bus> {
-    private Set<Gossip> meetGossips = new TreeSet<>();
+    private Set<Gossip> meetGossips = new HashSet<>();
     private int id;
     private MutableInt totalOfGossips;
 
@@ -61,5 +62,9 @@ public class Bus implements Comparable<Bus> {
     public void createAGossip() {
         meetGossips.add(Gossip.randomGossip());
         totalOfGossips.add(1);
+    }
+
+    public boolean knowsNGossips(int n) {
+        return meetGossips.size() == n;
     }
 }

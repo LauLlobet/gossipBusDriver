@@ -13,10 +13,16 @@ public class GossipsSpreader {
     }
 
     private void spreadGossipsAt(BusStop busStop) {
+        Bus lastGossipListenerBus = null;
         for(Bus gossipListenerBus : busStop.getBuses() ){
             for(Bus gossipTellerBus: busStop.getBuses()){
                 gossipListenerBus.getToKnowGossipsFrom(gossipTellerBus);
+                lastGossipListenerBus = gossipListenerBus;
             }
+        }
+        if(lastGossipListenerBus != null && lastGossipListenerBus.knowsNGossips(6)){
+            lastGossipListenerBus.createAGossip();
+            spreadGossipsAt(busStop);
         }
     }
 
