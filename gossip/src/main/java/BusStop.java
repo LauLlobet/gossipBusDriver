@@ -29,4 +29,8 @@ public class BusStop {
     public Set<Bus> getBuses() {
         return buses;
     }
+
+    public boolean hasBuses() {
+        return ! buses.isEmpty();
+    }
 }

@@ -9,7 +9,7 @@ import static org.hamcrest.CoreMatchers.is;
 4 2 3 4 5
 */
 
-public class MainFeature {
+public class MainFeatureShould {
     @Test
     public void countStopsTillGossipsAreOk(){
         //         .
